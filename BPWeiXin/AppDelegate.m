@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SDAppFrameTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +18,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [SDAppFrameTabBarController new];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    [self setupNavBar];
     return YES;
 }
 
+- (void)setupNavBar {
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
+    UINavigationBar *bar = [UINavigationBar appearance];
+    bar.barTintColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.9];
+    bar.tintColor = [UIColor whiteColor];
+    bar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+//    UITabBarController *tabVC = (UITabBarController *)self.window.rootViewController;
+//    UINavigationController *nav = tabVC.selectedViewController;
+//    UIViewController *childVC = [nav.childViewControllers lastObject];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
