@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B2953DE1CE462DD00D11B81 /* BPTimeLineCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2953DD1CE462DD00D11B81 /* BPTimeLineCellModel.m */; };
 		3B6579B21CE2E3AF00A25E0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6579B11CE2E3AF00A25E0D /* main.m */; };
 		3B6579B51CE2E3AF00A25E0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6579B41CE2E3AF00A25E0D /* AppDelegate.m */; };
 		3B6579E81CE2FBB300A25E0D /* Contacts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6579E31CE2FBB300A25E0D /* Contacts.xcassets */; };
@@ -110,9 +111,14 @@
 		3B657AEE1CE302AB00A25E0D /* BPDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B657AED1CE302AB00A25E0D /* BPDiscoverTableViewController.m */; };
 		3B657AF41CE3038A00A25E0D /* BPDiscoverTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B657AF31CE3038A00A25E0D /* BPDiscoverTableViewController.storyboard */; };
 		3B657AFA1CE3066200A25E0D /* BPTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B657AF91CE3066200A25E0D /* BPTimeLineTableViewController.m */; };
+		3B65C4BF1CE409F600B7659E /* SDTimeLineRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B65C4BE1CE409F600B7659E /* SDTimeLineRefreshHeader.m */; };
+		3B65C4C21CE40A0300B7659E /* SDTimeLineTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B65C4C11CE40A0300B7659E /* SDTimeLineTableHeaderView.m */; };
+		3BFD672D1CE46CEE009B956E /* BPTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD672C1CE46CEE009B956E /* BPTimeLineCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B2953DC1CE462DD00D11B81 /* BPTimeLineCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTimeLineCellModel.h; sourceTree = "<group>"; };
+		3B2953DD1CE462DD00D11B81 /* BPTimeLineCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTimeLineCellModel.m; sourceTree = "<group>"; };
 		3B6579AD1CE2E3AF00A25E0D /* BPWeiXin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BPWeiXin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6579B11CE2E3AF00A25E0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B6579B31CE2E3AF00A25E0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BPWeiXin/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -267,6 +273,12 @@
 		3B657AF31CE3038A00A25E0D /* BPDiscoverTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BPDiscoverTableViewController.storyboard; sourceTree = "<group>"; };
 		3B657AF81CE3066200A25E0D /* BPTimeLineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTimeLineTableViewController.h; sourceTree = "<group>"; };
 		3B657AF91CE3066200A25E0D /* BPTimeLineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTimeLineTableViewController.m; sourceTree = "<group>"; };
+		3B65C4BD1CE409F600B7659E /* SDTimeLineRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineRefreshHeader.h; sourceTree = "<group>"; };
+		3B65C4BE1CE409F600B7659E /* SDTimeLineRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineRefreshHeader.m; sourceTree = "<group>"; };
+		3B65C4C01CE40A0300B7659E /* SDTimeLineTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineTableHeaderView.h; sourceTree = "<group>"; };
+		3B65C4C11CE40A0300B7659E /* SDTimeLineTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineTableHeaderView.m; sourceTree = "<group>"; };
+		3BFD672B1CE46CEE009B956E /* BPTimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTimeLineCell.h; sourceTree = "<group>"; };
+		3BFD672C1CE46CEE009B956E /* BPTimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTimeLineCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -653,6 +665,8 @@
 		3B657AF61CE305EB00A25E0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3B2953DC1CE462DD00D11B81 /* BPTimeLineCellModel.h */,
+				3B2953DD1CE462DD00D11B81 /* BPTimeLineCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -660,6 +674,12 @@
 		3B657AF71CE305EB00A25E0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3B65C4BD1CE409F600B7659E /* SDTimeLineRefreshHeader.h */,
+				3B65C4BE1CE409F600B7659E /* SDTimeLineRefreshHeader.m */,
+				3B65C4C01CE40A0300B7659E /* SDTimeLineTableHeaderView.h */,
+				3B65C4C11CE40A0300B7659E /* SDTimeLineTableHeaderView.m */,
+				3BFD672B1CE46CEE009B956E /* BPTimeLineCell.h */,
+				3BFD672C1CE46CEE009B956E /* BPTimeLineCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -804,6 +824,8 @@
 				3B657ACF1CE2FC2900A25E0D /* SDWebImagePrefetcher.m in Sources */,
 				3B6579B51CE2E3AF00A25E0D /* AppDelegate.m in Sources */,
 				3B657AAF1CE2FC2900A25E0D /* MLEmojiLabel.m in Sources */,
+				3B65C4C21CE40A0300B7659E /* SDTimeLineTableHeaderView.m in Sources */,
+				3B2953DE1CE462DD00D11B81 /* BPTimeLineCellModel.m in Sources */,
 				3B657AB81CE2FC2900A25E0D /* MLLabel.m in Sources */,
 				3B657AD41CE2FC2900A25E0D /* UIImageView+HighlightedWebCache.m in Sources */,
 				3B657AB91CE2FC2900A25E0D /* MLLinkLabel.m in Sources */,
@@ -822,6 +844,7 @@
 				3B657AB21CE2FC2900A25E0D /* NSString+MLLabel.m in Sources */,
 				3B657AB41CE2FC2900A25E0D /* MLTextAttachment.m in Sources */,
 				3B657AC51CE2FC2900A25E0D /* SDRefreshView.m in Sources */,
+				3BFD672D1CE46CEE009B956E /* BPTimeLineCell.m in Sources */,
 				3B657ABE1CE2FC2900A25E0D /* UIView+SDAutoLayout.m in Sources */,
 				3B657ACB1CE2FC2900A25E0D /* SDWebImageDecoder.m in Sources */,
 				3B657AD31CE2FC2900A25E0D /* UIImage+WebP.m in Sources */,
@@ -833,6 +856,7 @@
 				3B657AC71CE2FC2900A25E0D /* MKAnnotationView+WebCache.m in Sources */,
 				3B657AC61CE2FC2900A25E0D /* UIView+SDExtension.m in Sources */,
 				3B657AB01CE2FC2900A25E0D /* NSAttributedString+MLLabel.m in Sources */,
+				3B65C4BF1CE409F600B7659E /* SDTimeLineRefreshHeader.m in Sources */,
 				3B657AC91CE2FC2900A25E0D /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -963,6 +987,7 @@
 				3B6579C61CE2E3AF00A25E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

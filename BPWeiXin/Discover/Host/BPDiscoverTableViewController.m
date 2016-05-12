@@ -7,6 +7,7 @@
 //
 
 #import "BPDiscoverTableViewController.h"
+#import "BPTimeLineTableViewController.h"
 
 @implementation BPDiscoverTableViewController
 
@@ -30,6 +31,10 @@
     if (indexPath.section != 0) {
         return;
     }
+    
+    BPTimeLineTableViewController *controller = [[BPTimeLineTableViewController alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
