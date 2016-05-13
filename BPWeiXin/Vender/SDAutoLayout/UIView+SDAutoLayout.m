@@ -927,6 +927,7 @@
         }
         if ([cell isKindOfClass:[UITableViewCell class]]) {
             CGFloat height = 0;
+            NSArray *tempArr = [NSArray arrayWithArray:cell.sd_bottomViewsArray];
             for (UIView *view in cell.sd_bottomViewsArray) {
                 height = MAX(height, view.bottom);
             }

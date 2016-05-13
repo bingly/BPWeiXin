@@ -9,8 +9,8 @@
 #import "BPTimeLineCellModel.h"
 #import <UIKit/UIKit.h>
 
-const CGFloat contentLabelFontSize = 15;
-CGFloat maxContentLabelHeighe = 0;
+extern const CGFloat contentLabelFontSize;
+extern CGFloat maxContentLabelHeight;
 
 @implementation BPTimeLineCellModel {
 
@@ -34,7 +34,7 @@ CGFloat maxContentLabelHeighe = 0;
 //        } else {
 //            _shouldShowMoreButton = NO;
 //        }
-        _shouldShowMoreButton = textRect.size.height > maxContentLabelHeighe;
+        _shouldShowMoreButton = textRect.size.height > maxContentLabelHeight;
     }
     return _msgContent;
 }
@@ -48,7 +48,7 @@ CGFloat maxContentLabelHeighe = 0;
     }
 }
 
-- (NSArray *)createModel{
+- (NSArray *)createModelsWithCount:(NSInteger)count {
 
     NSArray *iconImageNamesArray = @[@"icon0.jpg",
                                      @"icon1.jpg",
@@ -95,13 +95,26 @@ CGFloat maxContentLabelHeighe = 0;
                                      @"pic8.jpg"
                                      ];
     
-    int iconRandomIndex = arc4random_uniform(5);
-    int nameRandomIndex = arc4random_uniform(5);
-    int contentRandomIndex = arc4random_uniform(5);
+    NSMutableArray *resArr = [NSMutableArray new];
     
-    self.iconName   = iconImageNamesArray[iconRandomIndex];
-    self.name       = namesArray[nameRandomIndex];
-    self.msgContent = textArray[contentRandomIndex];
+    for (int i = 0; i < count; i ++) {
+        int iconRandomIndex = arc4random_uniform(5);
+        int nameRandomIndex = arc4random_uniform(5);
+        int contentRandomIndex = arc4random_uniform(5);
+        
+//        self.iconName   = iconImageNamesArray[iconRandomIndex];
+//        self.name       = namesArray[nameRandomIndex];
+//        self.msgContent = textArray[contentRandomIndex];
+        
+        BPTimeLineCellModel *model = [BPTimeLineCellModel new];
+        model.iconName   = iconImageNamesArray[iconRandomIndex];
+        model.name       = namesArray[nameRandomIndex];
+        model.msgContent = textArray[contentRandomIndex];
+        
+        [resArr addObject:model];
+    }
+    
+    return resArr;
 }
 
 @end

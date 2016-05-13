@@ -113,6 +113,8 @@
 		3B657AFA1CE3066200A25E0D /* BPTimeLineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B657AF91CE3066200A25E0D /* BPTimeLineTableViewController.m */; };
 		3B65C4BF1CE409F600B7659E /* SDTimeLineRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B65C4BE1CE409F600B7659E /* SDTimeLineRefreshHeader.m */; };
 		3B65C4C21CE40A0300B7659E /* SDTimeLineTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B65C4C11CE40A0300B7659E /* SDTimeLineTableHeaderView.m */; };
+		3BB5A5221CE5B20E00545194 /* SDTimeLineRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB5A5211CE5B20E00545194 /* SDTimeLineRefreshFooter.m */; };
+		3BB5A5281CE5C87E00545194 /* BPTimeLineRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB5A5271CE5C87E00545194 /* BPTimeLineRefreshFooter.m */; };
 		3BFD672D1CE46CEE009B956E /* BPTimeLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFD672C1CE46CEE009B956E /* BPTimeLineCell.m */; };
 /* End PBXBuildFile section */
 
@@ -277,6 +279,10 @@
 		3B65C4BE1CE409F600B7659E /* SDTimeLineRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineRefreshHeader.m; sourceTree = "<group>"; };
 		3B65C4C01CE40A0300B7659E /* SDTimeLineTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineTableHeaderView.h; sourceTree = "<group>"; };
 		3B65C4C11CE40A0300B7659E /* SDTimeLineTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineTableHeaderView.m; sourceTree = "<group>"; };
+		3BB5A5201CE5B20E00545194 /* SDTimeLineRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTimeLineRefreshFooter.h; sourceTree = "<group>"; };
+		3BB5A5211CE5B20E00545194 /* SDTimeLineRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDTimeLineRefreshFooter.m; sourceTree = "<group>"; };
+		3BB5A5261CE5C87E00545194 /* BPTimeLineRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTimeLineRefreshFooter.h; sourceTree = "<group>"; };
+		3BB5A5271CE5C87E00545194 /* BPTimeLineRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTimeLineRefreshFooter.m; sourceTree = "<group>"; };
 		3BFD672B1CE46CEE009B956E /* BPTimeLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPTimeLineCell.h; sourceTree = "<group>"; };
 		3BFD672C1CE46CEE009B956E /* BPTimeLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPTimeLineCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -674,12 +680,16 @@
 		3B657AF71CE305EB00A25E0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3BB5A5201CE5B20E00545194 /* SDTimeLineRefreshFooter.h */,
+				3BB5A5211CE5B20E00545194 /* SDTimeLineRefreshFooter.m */,
 				3B65C4BD1CE409F600B7659E /* SDTimeLineRefreshHeader.h */,
 				3B65C4BE1CE409F600B7659E /* SDTimeLineRefreshHeader.m */,
 				3B65C4C01CE40A0300B7659E /* SDTimeLineTableHeaderView.h */,
 				3B65C4C11CE40A0300B7659E /* SDTimeLineTableHeaderView.m */,
 				3BFD672B1CE46CEE009B956E /* BPTimeLineCell.h */,
 				3BFD672C1CE46CEE009B956E /* BPTimeLineCell.m */,
+				3BB5A5261CE5C87E00545194 /* BPTimeLineRefreshFooter.h */,
+				3BB5A5271CE5C87E00545194 /* BPTimeLineRefreshFooter.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -839,6 +849,7 @@
 				3B657ABF1CE2FC2900A25E0D /* SDBrowserImageView.m in Sources */,
 				3B657AB31CE2FC2900A25E0D /* MLExpressionManager.m in Sources */,
 				3B657AFA1CE3066200A25E0D /* BPTimeLineTableViewController.m in Sources */,
+				3BB5A5221CE5B20E00545194 /* SDTimeLineRefreshFooter.m in Sources */,
 				3B657AD21CE2FC2900A25E0D /* UIImage+MultiFormat.m in Sources */,
 				3B657ACD1CE2FC2900A25E0D /* SDWebImageDownloaderOperation.m in Sources */,
 				3B657AB21CE2FC2900A25E0D /* NSString+MLLabel.m in Sources */,
@@ -852,6 +863,7 @@
 				3B657ADA1CE2FCE000A25E0D /* SDAppFrameTabBarController.m in Sources */,
 				3B657ABB1CE2FC2900A25E0D /* README.md in Sources */,
 				3B657AB11CE2FC2900A25E0D /* NSMutableAttributedString+MLLabel.m in Sources */,
+				3BB5A5281CE5C87E00545194 /* BPTimeLineRefreshFooter.m in Sources */,
 				3B657ACC1CE2FC2900A25E0D /* SDWebImageDownloader.m in Sources */,
 				3B657AC71CE2FC2900A25E0D /* MKAnnotationView+WebCache.m in Sources */,
 				3B657AC61CE2FC2900A25E0D /* UIView+SDExtension.m in Sources */,
@@ -950,6 +962,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BPWeiXin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bingcai.BPWeiXin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -962,6 +975,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = BPWeiXin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bingcai.BPWeiXin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

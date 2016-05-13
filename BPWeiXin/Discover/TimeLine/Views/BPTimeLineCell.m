@@ -60,6 +60,7 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     .leftSpaceToView(_iconView, margin)
     .topEqualToView(_iconView)
     .heightIs(18);
+    [_nameLabel setSingleLineAutoResizeWithMaxWidth:200];
     
     _contentLabel.sd_layout
     .leftEqualToView(_nameLabel)
@@ -75,6 +76,8 @@ CGFloat maxContentLabelHeight = 0; // 根据具体font而定
     _iconView.image = [UIImage imageNamed:model.iconName];
     _nameLabel.text = model.name;
     _contentLabel.text = model.msgContent;
+    
+    [self setupAutoHeightWithBottomView:_contentLabel bottomMargin:15];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

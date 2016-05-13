@@ -9,6 +9,12 @@
 #import "BPTimeLineTableViewController.h"
 #import "SDTimeLineTableHeaderView.h"
 #import "SDTimeLineRefreshHeader.h"
+#import "BPTimeLineCell.h"
+#import "BPTimeLineCellModel.h"
+#import "BPTimeLineRefreshFooter.h"
+#import "SDTimeLineRefreshFooter.h"
+
+#import "UITableView+SDAutoTableViewCellHeight.h"
 
 NSString *const kTimeLineTableViewCellId = @"BPTimeLineCell";
 static CGFloat textFieldH = 40;
@@ -20,6 +26,7 @@ static CGFloat textFieldH = 40;
 @implementation BPTimeLineTableViewController {
 
     SDTimeLineRefreshHeader *_refreshHeader;
+    BPTimeLineRefreshFooter *_refreshFooter;
 }
 
 - (void)viewDidLoad {
@@ -27,14 +34,39 @@ static CGFloat textFieldH = 40;
     
     self.automaticallyAdjustsScrollViewInsets = NO;
    
-    [self.dataArray addObjectsFromArray:@[@"bing", @"pin", @"cai", @"wang", @"shu"]];
+//    [self.dataArray addObjectsFromArray:@[@"bing", @"pin", @"cai", @"wang", @"shu"]];
+    BPTimeLineCellModel *model = [BPTimeLineCellModel new];
+    NSArray *currentArr = [model createModelsWithCount:10];
+    [self.dataArray addObjectsFromArray:currentArr];
     
 //    __weak typeof(self) weakSelf = self;
+//    __weak BPTimeLineCellModel *weakModel = model;
+    
+//    _SDRefreshFooter = [SDTimeLineRefreshFooter refreshFooterWithRefreshingText:@"_refreshFooter"];
+//    [_SDRefreshFooter addToScrollView:self.tableView refreshOpration:nil];
+    
+    _refreshFooter = [BPTimeLineRefreshFooter refreshFooterWithRefreshingText:@"_refreshFooter"];
+    [_refreshFooter addTOScrollView:self.tableView refreshOpration:nil];
+    
+//    _refreshFooter1 = [BPTimeLineRefreshFooter1 refreshFooterWithRefreshingText:@"_refreshFooter"];
+//    [_refreshFooter1 addTOScrollView1:self.tableView];
+    
+//    _refreshFooter = [BPTimeLineRefreshFooter refreshFooterWithRefreshingText:@"正在加载数据..."];
+//    __weak typeof(_refreshFooter) weakRefreshFooter = _refreshFooter;
+//    [_refreshFooter addToScrollView:self.tableView refreshOpration:^{
+//    
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [weakSelf.dataArray addObjectsFromArray:[weakModel createModelsWithCount:10]];
+//            [weakSelf.tableView reloadData];
+//            [weakRefreshFooter endRefreshing];
+//        });
+//    }];
 
     SDTimeLineTableHeaderView *headerView = [SDTimeLineTableHeaderView new];
     headerView.frame = CGRectMake(0, 0, 0, 260);
     self.tableView.tableHeaderView = headerView;
     
+    [self.tableView registerClass:[BPTimeLineCell class] forCellReuseIdentifier:kTimeLineTableViewCellId];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -50,7 +82,7 @@ static CGFloat textFieldH = 40;
         [_refreshHeader setRefreshingBlock:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [weakSelf.dataArray removeAllObjects];
-                [weakSelf.dataArray addObjectsFromArray:@[@"a",@"b",@"c",@"d",@"e"]];
+                [weakSelf.dataArray addObjectsFromArray:[[BPTimeLineCellModel new] createModelsWithCount:10]];
                 [weakHeader endRefreshing];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [weakSelf.tableView reloadData];
@@ -74,10 +106,27 @@ static CGFloat textFieldH = 40;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kTimeLineTableViewCellId];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kTimeLineTableViewCellId];
+//    cell.textLabel.text = self.dataArray[indexPath.row];
+    
+    BPTimeLineCell *cell = [tableView dequeueReusableCellWithIdentifier:kTimeLineTableViewCellId];
+    cell.model = self.dataArray[indexPath.row];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    id model = self.dataArray[indexPath.row];
+    return [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[BPTimeLineCell class] contentViewWidth:[self cellContentViewWidth]];
+
+}
+
+- (CGFloat)cellContentViewWidth {
+
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    
+    return width;
 }
 
 /*

@@ -104,7 +104,7 @@ static const CGFloat criticalY = -60.f;
     if (self.refreshState == SDWXRefreshViewStateRefreshing) return;
     
     CGAffineTransform transform = CGAffineTransformIdentity;
-    NSLog(@"CGAffineTransform: %f",y);
+//    NSLog(@"CGAffineTransform: %f",y);
     transform = CGAffineTransformTranslate(transform, 0, -y);
     transform = CGAffineTransformRotate(transform, rotateValue);
     
